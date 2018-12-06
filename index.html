@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VR Breathe</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+</head>
+ 
+<body>
+    <a-scene class="fullscreen" >
+        
+        <a-entity position="0 1.61 0" camera="userHeight:0.01" look-controls="" data-aframe-inspector-original-camera=""></a-entity>
+        
+        <a-plane height="100" width="100" rotation="-90 0 0" >
+            <a-animation attribute="material.color" from="#04705a" to="#daf2a6" dur="5000" repeat="indefinite" direction="alternate-reverse"></a-animation>
+        </a-plane>
+
+        <a-entity position="0 1.6 -2" scale="0.02 0.02 0.02" gltf-model="https://raw.githubusercontent.com/coob113/breathe/master/scene.gltf">
+            <a-animation attribute="rotation" dur="5000" fill="forwards" to="0 1080 0" repeat="indefinite" direction="alternate-reverse"></a-animation>
+        </a-entity>
+        
+        <a-obj-model src="https://raw.githubusercontent.com/coob113/test5/master/close.obj" mtl="https://raw.githubusercontent.com/coob113/test5/master/close.mtl"></a-obj-model>
+        
+        <a-entity position="0 1.6 -2" obj-model="ttps://raw.githubusercontent.com/coob113/test6/master/object.obj); mtl: url(ttps://raw.githubusercontent.com/coob113/test6/master/object.obj)"></a-entity>
+
+        
+        <a-entity position="-0.5 -0.1 -1" text__header="value:Inhale;color:#faffe0;align:center;width:0.37;wrapCount:11;lineHeight:40;font:exo2semibold;height:2;letterSpacing:2;tabSize:5;transparent:true;opacity:0.8" rotation="0 0 0">
+            <a-animation attribute="position" from="-0.5 1.7 -1" to="-0.5 -0.1 -1" dur="2000" repeat="3"  delay="3000" direction="alternate-reverse"></a-animation>
+        </a-entity> 
+
+        <a-entity position="0.5 1.7 -1" text__header="value:Exhale;color:#04705a;align:center;width:0.37;wrapCount:11;lineHeight:40;font:exo2semibold;height:2;letterSpacing:2;tabSize:5;transparent:true;opacity:0.8 " rotation="0 0 0">
+             <a-animation attribute="position" from="0.5 -0.1 -1" to="0.5 1.7 -1" dur="2000" repeat="3" delay="3000" direction="alternate-reverse"></a-animation>
+              <a-animation attribute="rotation" dur="100" fill="forwards" to="95 0 0" repeat="1" delay="23500"></a-animation>
+        </a-entity> 
+        
+        <a-sky>
+            <a-animation attribute="material.color" from="#118e66" to="#faffe0" dur="5000" repeat="indefinite" direction="alternate-reverse"></a-animation>
+        </a-sky>
+    </a-scene>
+  
+    <textarea readonly="" style="font-size: 12pt; border: 0px; padding: 0px; margin: 0px; position: absolute; left: -9999px; top: 0px;"></textarea>
+     
+</body>
+</html>
